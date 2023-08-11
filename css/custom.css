@@ -256,7 +256,7 @@
   position: fixed;
   /* 指定位置 */
   left: 10px;
-  bottom: 50px;
+  bottom: 10px;
 
   z-index: 1919810;
 }
