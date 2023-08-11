@@ -256,7 +256,8 @@
   position: fixed;
   /* 指定位置 */
   left: 10px;
-  bottom: 10px;
+  bottom: 50px;
+
   z-index: 1919810;
 }
 /* 雪花特效 */
