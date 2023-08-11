@@ -255,8 +255,8 @@
 #fps {
   position: fixed;
   /* 指定位置 */
-  left: 10px;
-  bottom: 10px;
+  left: 5px;
+  bottom: 20px;
 
   z-index: 1919810;
 }
