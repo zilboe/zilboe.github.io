@@ -204,11 +204,11 @@
 /* 鼠标样式 */
 #cursor {
   position: fixed;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   /* 这里改变跟随的底色 */
   background: rgb(25, 52, 228);
-  border-radius: 8px;
+  border-radius: 10px;
   opacity: 0.25;
   z-index: 10086;
   pointer-events: none;
