@@ -4990,7 +4990,7 @@ h1.page-title + .tag-cloud-list {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5555;
+  z-index: 4444;
   pointer-events: none;
 }
 .medium-zoom-image--opened {
