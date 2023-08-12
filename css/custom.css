@@ -260,7 +260,7 @@
 
   z-index: 1919810;
 }
-/* 雪花特效 */
+/* 雪花特效
 [data-theme="light"] #snow{
   display: block;
   position: fixed;
@@ -272,13 +272,13 @@
   z-index: -2;
 }
 
-/* 雪花黑夜模式不显示 */
-[data-theme="dark"] #snow{
+雪花黑夜模式不显示 */
+/* [data-theme="dark"] #snow{ */
   display: none;
-}
+/* }d */
 
 /* 新年侧边栏 */
-
+/* 
 #newYear {
   color: white;
   padding: 0 !important;
@@ -313,7 +313,7 @@
 #newYear-main .newYear-time {
   font-weight: bold;
   text-align: center;
-}
+} */
 
 #newYear-main .time,
 #newYear-main .happyNewYear {
