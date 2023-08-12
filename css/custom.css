@@ -207,7 +207,7 @@
   width: 20px;
   height: 20px;
   /* 这里改变跟随的底色 */
-  background: rgb(78, 36, 146)
+  background: rgb(25, 52, 228);
   border-radius: 10px;
   opacity: 0.25;
   z-index: 10086;
@@ -258,7 +258,7 @@
   left: 0px;
   bottom: 64px;
 
-  z-index: 3;
+  z-index: 1919810;
 }
 /* 雪花特效
 [data-theme="light"] #snow{
