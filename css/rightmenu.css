@@ -11,7 +11,7 @@
       /* 菜单面板文字颜色 */
     border: 1px solid var(--font-color);
     border-radius: 8px;
-    z-index: 100;
+    z-index: 10;
   }
   #rightMenu .rightMenu-group {
     padding: 7px 6px;
