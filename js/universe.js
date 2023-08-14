@@ -105,8 +105,9 @@ function dark() {
       u();
     })(),
     (function t() {
-      document.getElementsByTagName("html")[0].getAttribute("data-theme") ==
-        "dark" && u(),
+      u();
+      // document.getElementsByTagName("html")[0].getAttribute("data-theme") ==
+      //   "dark" && u(),
         window.requestAnimationFrame(t);
     })();
 }
