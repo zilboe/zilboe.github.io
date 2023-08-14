@@ -180,7 +180,7 @@
 
 /* 背景宇宙星光  */
 #universe{
-    display: block;
+    display: rgb(40, 213, 219);
     position: fixed;
     margin: 0;
     padding: 0;
