@@ -51,7 +51,7 @@
   
   /* 黑夜模式适配 */
   [data-theme="dark"] #aside-content > .card-widget.card-info {
-    background: #411010ee;
+    background: #1b1818ee;
   }
   
   /* 个人信息Follow me按钮 */
