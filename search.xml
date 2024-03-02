@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>【Rust】第四十七章：将错误信息输出到标准错误</title>
+      <link href="/2024/03/02/2024-3-2-16-21-00-rust-47/"/>
+      <url>/2024/03/02/2024-3-2-16-21-00-rust-47/</url>
+      
+        <content type="html"><![CDATA[<h1 id="将错误信息输出到标准错误"><a href="#将错误信息输出到标准错误" class="headerlink" title="将错误信息输出到标准错误"></a>将错误信息输出到标准错误</h1><h2 id="标准输出-vs-标注错误"><a href="#标准输出-vs-标注错误" class="headerlink" title="标准输出 vs 标注错误"></a>标准输出 vs 标注错误</h2><p>标准输出：stout</p><ul><li>println!</li></ul><p>标准错误：stderr</p><ul><li>eprintln!</li></ul><p>回到main.rs文件进行修改</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> minigrep::Config;</span><br><span class="line"><span class="keyword">use</span> std::env;</span><br><span class="line"><span class="keyword">use</span> std::process;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">args</span>: <span class="type">Vec</span>&lt;<span class="type">String</span>&gt; = env::<span class="title function_ invoke__">args</span>().<span class="title function_ invoke__">collect</span>();</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">config</span> = Config::<span class="title function_ invoke__">new</span>(&amp;args).<span class="title function_ invoke__">unwrap_or_else</span>(|err| &#123;</span><br><span class="line">        eprintln!(<span class="string">&quot;Problem parsing arguments: &#123;&#125;&quot;</span>, err);    <span class="comment">//本章修改</span></span><br><span class="line">        process::<span class="title function_ invoke__">exit</span>(<span class="number">1</span>);    </span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Err</span>(e) = minigrep::<span class="title function_ invoke__">run</span>(config) &#123;</span><br><span class="line">        eprintln!(<span class="string">&quot;Application error: &#123;&#125;&quot;</span>, e);    <span class="comment">//本章修改</span></span><br><span class="line">        process::<span class="title function_ invoke__">exit</span>(<span class="number">1</span>);    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【Rust】第四十六章：实例：使用环境变量</title>
       <link href="/2024/03/01/2024-3-1-21-55-00-rust-46/"/>
       <url>/2024/03/01/2024-3-1-21-55-00-rust-46/</url>
