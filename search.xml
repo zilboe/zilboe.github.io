@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>【Rust】第四十九章：闭包：类型推断和标注</title>
+      <link href="/2024/03/05/2024-3-5-20-12-00-rust-49/"/>
+      <url>/2024/03/05/2024-3-5-20-12-00-rust-49/</url>
+      
+        <content type="html"><![CDATA[<h1 id="闭包：类型推断和标注"><a href="#闭包：类型推断和标注" class="headerlink" title="闭包：类型推断和标注"></a>闭包：类型推断和标注</h1><ul><li>闭包不要求标注参数和返回值的类型，而函数是需要的，函数是暴露给用户的接口，而闭包不需要。</li><li>闭包通常很短小，只在狭小的上下文中工作，编译器通常能推断类型</li><li>可以手动添加类型标注</li></ul><h1 id="函数和闭包的定义语法"><a href="#函数和闭包的定义语法" class="headerlink" title="函数和闭包的定义语法"></a>函数和闭包的定义语法</h1><ul><li>fn add_one_v1     (x: u32) -&gt; u32 {x + 1}</li><li>let add_one_v2 &#x3D; |x: u32| -&gt; u32 {x+1};</li><li>let add_one_v3 &#x3D;     |x|    {x+1};</li><li>let add_one_v4 &#x3D; |x|    x + 1;</li></ul><h1 id="闭包的类型推断"><a href="#闭包的类型推断" class="headerlink" title="闭包的类型推断"></a>闭包的类型推断</h1><p>注意：闭包的定义最终只会为参数&#x2F;返回值推断出唯一具体的类型</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">example_closure</span> = |x| x;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s</span> = <span class="title function_ invoke__">example_closure</span>(<span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>));    <span class="comment">//只会在第一次推断该类型且保持不变</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">n</span> = <span class="title function_ invoke__">example_closure</span>(<span class="number">5</span>);                        <span class="comment">//编译失败，闭包类型已经固定</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【Rust】第四十八章：闭包</title>
       <link href="/2024/03/04/2024-3-4-21-48-00-rust-48/"/>
       <url>/2024/03/04/2024-3-4-21-48-00-rust-48/</url>
